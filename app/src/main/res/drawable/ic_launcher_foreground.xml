@@ -1,60 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-
-    <!-- 1. GORGEOUS CENTRAL GLOWING SUN (Top-Left Background) -->
     <path
-        android:pathData="M44,44m-18,0a18,18 0,1 1,36 0a18,18 0,1 1,-36 0">
-        <aapt:attr name="android:fillColor">
-            <gradient
-                android:startX="26"
-                android:startY="26"
-                android:endX="62"
-                android:endY="62"
-                android:type="linear">
-                <item
-                    android:color="#FFEA79"
-                    android:offset="0.0" />
-                <item
-                    android:color="#FBBF24"
-                    android:offset="0.6" />
-                <item
-                    android:color="#EA580C"
-                    android:offset="1.0" />
-            </gradient>
-        </aapt:attr>
-    </path>
-
-    <!-- 2. CLOUD GLOW/SHADOW (To add depth) -->
+        android:fillColor="#FFD700"
+        android:pathData="M54,34c-11.04,0 -20,8.96 -20,20c0,11.04 8.96,20 20,20c11.04,0 20,-8.96 20,-20C74,42.96 65.04,34 54,34zM54,68c-7.73,0 -14,-6.27 -14,-14c0,-7.73 6.27,-14 14,-14c7.73,0 14,6.27 14,14C68,61.73 61.73,68 54,68z" />
     <path
-        android:pathData="M48,68 h26 c5.5,0 10,-4.5 10,-10 c0,-5 -3.8,-9.2 -8.7,-9.9 c-1.9,-6.2 -7.7,-10.7 -14.5,-10.7 c-6.9,0 -12.7,4.6 -14.6,10.9 c-0.5,-0.1 -1,-0.2 -1.5,-0.1 c-4.3,0.7 -7.6,4.4 -7.6,8.9 c0,5.1 4.1,9.2 9.2,9.2 z"
-        android:fillColor="#22000000" />
-
-    <!-- 3. GORGEOUS 3D EMBOSSED CLOUD (Bottom-Right Foreground) -->
-    <path
-        android:pathData="M46,66 h26 c5.5,0 10,-4.5 10,-10 c0,-5 -3.8,-9.2 -8.7,-9.9 c-1.9,-6.2 -7.7,-10.7 -14.5,-10.7 c-6.9,0 -12.7,4.6 -14.6,10.9 c-0.5,-0.1 -1,-0.2 -1.5,-0.1 c-4.3,0.7 -7.6,4.4 -7.6,8.9 c0,5.1 4.1,9.2 9.2,9.2 z">
-        <aapt:attr name="android:fillColor">
-            <gradient
-                android:startX="40"
-                android:startY="35"
-                android:endX="78"
-                android:endY="66"
-                android:type="linear">
-                <item
-                    android:color="#FFFFFF"
-                    android:offset="0.0" />
-                <item
-                    android:color="#F8FAFC"
-                    android:offset="0.6" />
-                <item
-                    android:color="#E2E8F0"
-                    android:offset="1.0" />
-            </gradient>
-        </aapt:attr>
-    </path>
-
+        android:fillColor="#FFFFFF"
+        android:pathData="M66,48c-0.88,0 -1.72,0.14 -2.53,0.38c-1.89,-4.59 -6.37,-7.8 -11.6,-8.3c-0.08,-0.01 -0.16,-0.02 -0.24,-0.02c-4.97,0 -9.23,2.94 -11.13,7.18C36.42,47.34 33,51.04 33,55.5c0,4.69 3.81,8.5 8.5,8.5h23.5c4.69,0 8.5,-3.81 8.5,-8.5S69.69,48 66,48z" />
 </vector>

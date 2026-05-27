@@ -1,5 +1,5 @@
 {
-  "name": "Cuaca Glass",
+  "name": "weatherK",
   "description": "Clean glassmorphic weather application featuring smooth transitions, iOS-style minimalist widgets, auto-adjusted dark mode, and intelligent Gemini weather content.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
