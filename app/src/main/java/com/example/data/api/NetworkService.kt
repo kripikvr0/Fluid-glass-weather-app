@@ -2,6 +2,8 @@ package com.example.data.api
 
 import com.example.data.model.GeocodingResponse
 import com.example.data.model.WeatherResponse
+import com.example.data.model.AirQualityResponse
+import com.example.data.model.CurrentAirQuality
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import okhttp3.OkHttpClient
@@ -69,6 +71,15 @@ interface WeatherApi {
         @Query("count") count: Int = 10,
         @Query("language") language: String = "id"
     ): GeocodingResponse
+
+    @GET
+    suspend fun getAirQuality(
+        @Url url: String,
+        @Query("latitude") latitude: Double,
+        @Query("longitude") longitude: Double,
+        @Query("current") current: String = "pm2_5,pm10,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone,us_aqi",
+        @Query("timezone") timezone: String = "auto"
+    ): AirQualityResponse
 }
 
 interface GeminiApi {

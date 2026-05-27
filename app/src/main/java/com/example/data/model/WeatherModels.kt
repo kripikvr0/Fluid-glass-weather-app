@@ -62,3 +62,21 @@ data class GeocodingResult(
     @Json(name = "country_code") val countryCode: String? = null,
     val timezone: String? = null
 )
+
+@JsonClass(generateAdapter = true)
+data class AirQualityResponse(
+    @Json(name = "current") val current: CurrentAirQuality?
+)
+
+@JsonClass(generateAdapter = true)
+data class CurrentAirQuality(
+    val time: String,
+    @Json(name = "pm2_5") val pm25: Double,
+    @Json(name = "pm10") val pm10: Double,
+    @Json(name = "carbon_monoxide") val carbonMonoxide: Double,
+    @Json(name = "nitrogen_dioxide") val nitrogenDioxide: Double,
+    @Json(name = "sulphur_dioxide") val sulphurDioxide: Double,
+    val ozone: Double,
+    @Json(name = "us_aqi") val usAqi: Int
+)
+

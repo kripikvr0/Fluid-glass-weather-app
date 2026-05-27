@@ -8,6 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -29,6 +30,7 @@ fun GlassCard(
     cornerRadius: Dp = 24.dp,
     borderWidth: Dp = 1.dp,
     glassColor: Color? = null,
+    contentPadding: PaddingValues = PaddingValues(16.dp),
     testTag: String = "glass_card",
     onClick: (() -> Unit)? = null,
     content: @Composable () -> Unit
@@ -36,7 +38,7 @@ fun GlassCard(
     val defaultColor = if (isDark) {
         Color(0xFF0F172A).copy(alpha = 0.45f)
     } else {
-        Color.White.copy(alpha = 0.40f)
+        Color.White.copy(alpha = 0.60f)
     }
 
     val finalGlassColor = glassColor ?: defaultColor
@@ -44,32 +46,29 @@ fun GlassCard(
     val borderBrush = Brush.linearGradient(
         colors = if (isDark) {
             listOf(
-                Color.White.copy(alpha = 0.18f),
-                Color.White.copy(alpha = 0.04f),
-                Color.Black.copy(alpha = 0.25f)
+                Color.White.copy(alpha = 0.3f),
+                Color.White.copy(alpha = 0.05f),
+                Color.Black.copy(alpha = 0.3f)
             )
         } else {
             listOf(
-                Color.White.copy(alpha = 0.45f),
-                Color.White.copy(alpha = 0.12f),
+                Color.White.copy(alpha = 0.8f),
+                Color.White.copy(alpha = 0.2f),
                 Color.White.copy(alpha = 0.05f)
             )
         }
     )
 
-// Enhanced glass effect by making inner background more layered
     val gradientBackground = Brush.linearGradient(
         colors = if (isDark) {
             listOf(
-                finalGlassColor.copy(alpha = finalGlassColor.alpha * 1.2f.coerceAtMost(1f)),
-                finalGlassColor.copy(alpha = finalGlassColor.alpha * 0.7f),
-                finalGlassColor
+                finalGlassColor,
+                finalGlassColor.copy(alpha = finalGlassColor.alpha * 0.7f)
             )
         } else {
             listOf(
-                Color.White.copy(alpha = 0.5f),
-                Color.White.copy(alpha = 0.2f),
-                Color.White.copy(alpha = 0.4f)
+                finalGlassColor,
+                finalGlassColor.copy(alpha = finalGlassColor.alpha * 0.7f)
             )
         }
     )
@@ -86,18 +85,19 @@ fun GlassCard(
         modifier = modifier
             .testTag(testTag)
             .shadow(
-                elevation = if (isDark) 12.dp else 4.dp,
+                elevation = if (isDark) 0.dp else 8.dp,
                 shape = shape,
                 clip = false,
-                ambientColor = Color.Black.copy(alpha = 0.15f),
-                spotColor = Color.Black.copy(alpha = 0.25f)
+                ambientColor = Color.Black.copy(alpha = 0.05f),
+                spotColor = Color.Black.copy(alpha = 0.1f)
             )
             .border(BorderStroke(borderWidth, borderBrush), shape = shape)
             .clip(shape)
             .background(gradientBackground)
             .then(clickableModifier)
-            .padding(16.dp)
+            .padding(contentPadding)
     ) {
         content()
     }
 }
+
