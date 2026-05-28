@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Blue Circle Background -->
+    <path
+        android:pathData="M54,12 C77.19,12 96,30.81 96,54 C96,77.19 77.19,96 54,96 C30.81,96 12,77.19 12,54 C12,30.81 30.81,12 54,12 Z"
+        android:fillColor="#0288D1"/>
+    <!-- Glowing Orange Sun -->
+    <path
+        android:pathData="M48,46m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0"
+        android:fillColor="#FBBF24"/>
+    <!-- Clean Minimalist Cloud -->
+    <path
+        android:pathData="M78,66 C78,71.52 73.52,76 68,76 L40,76 C33.37,76 28,70.63 28,64 C28,57.7 32.86,52.54 39,52.05 C40.85,43.43 48.51,37 57.5,37 C65.57,37 72.53,42.15 75.1,49.56 C76.78,49.19 78.43,49 80,49 C86.63,49 92,54.37 92,61 C92,67.31 87.14,72.47 81,72.95"
+        android:fillColor="#FFFFFF" />
+</vector>
